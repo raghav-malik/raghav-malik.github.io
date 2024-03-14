@@ -1,0 +1,446 @@
+:root
+{
+    --dark-grey: #262626;
+    --pink: #ffb6c1;
+}
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+body
+{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    margin: 0rem;
+    overflow: hidden;
+}
+
+header
+{
+    background-color: black;
+    font-family: "Comfortaa";
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 2;
+    user-select: none;
+    width: 100%;
+}
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* scrollbar-width: 0px; */
+}
+
+li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar
+{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    /* margin-top: 8px; */
+    user-select: none;
+}
+
+.nav-menu
+{
+    display: flex;
+    min-width: 125px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    text-align: right;
+    border-radius: 7%;
+    background-color: black;
+}
+
+.nav-branding
+{
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin: 12px;
+}
+
+.nav-link
+{
+    transition: 0.7s ease;
+}
+
+.nav-link:hover
+{
+    color: var(--pink);
+    transform: scale(1.05);
+}
+
+.hamburger
+{
+    display: none;
+    cursor: pointer;
+}
+
+.bar
+{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.bar:hover
+{
+    background-color: var(--pink);
+}
+
+@media(max-width: 2000px)
+{
+
+    .hamburger
+    {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2)
+    {
+        opacity: 0;
+        background-color: var(--pink);
+    }
+    .hamburger.active .bar:nth-child(1)
+    {
+        transform: translateY(8px) rotate(45deg);
+        background-color: var(--pink);
+    }
+    .hamburger.active .bar:nth-child(3)
+    {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: var(--pink);
+    }
+
+    .hamburger.active .bar:hover
+    {
+        background-color: white;
+    }
+
+    .nav-menu
+    {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--dark-grey);
+        width: 12.5%;
+        min-width: 100px;
+        text-align: right;
+        transition: 0.3s;
+        user-select: none;
+        box-shadow: 1px;
+        border: solid 1px black;
+    }
+    .nav-item
+    {
+        margin: 16px 0;
+        border-bottom: 1px solid var(--pink);
+        border-width: 100%;
+        padding: 5px;
+    }
+    .nav-menu.active
+    {
+        right:0;
+    }
+}
+
+main
+{
+    background-color: black;
+    font-family: "Comfortaa";
+    /* margin-top: -50px; */
+    height: 100vh;
+    width: auto;
+    position: relative;
+    z-index: 1;
+    padding: 1%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    object-fit: cover;
+}
+
+#main-explore
+{
+    background-color: black;
+    font-family: "Comfortaa";
+    margin-top: -100px;
+    height: 100vh;
+    width: auto;
+    position: relative;
+    z-index: 1;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+.main-title
+{
+    font-family: "Comfortaa";
+    text-align: center;
+    color: white;
+    margin-bottom: 2%;
+}
+.main-body
+{
+    background-color: var(--dark-grey);
+    height: auto;
+    /* min-height: 95vh; */
+    width: 100%;
+    border-radius: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1%;
+    padding: 1%;
+}
+.art-container
+{
+    display: inline-block;
+    background-color: white;
+    width: 40vmin;
+    height: 58vmin;
+    margin: 1%;
+    border-radius: 2%;
+    padding: 0%;
+    text-align: center;
+    color: var(--dark-grey);
+    transition: 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
+}
+.art-container:hover
+{
+    background-color: var(--pink);
+    transform: scale(1.05);
+}
+.art-preview
+{
+    display: block;
+    background-size: cover;
+    background-position: center;
+    margin: 2%;
+    background-color: var(--dark-grey);
+    height: 95%;
+    width: 96%;
+    border-radius: 2%;
+}
+.title > a
+{
+    display: block;
+    text-align: left;
+    color: #262626;;
+    margin: 0% 5%;
+    font-size: larger;
+}
+.artist
+{
+    display:block;
+    text-align: right;
+    margin: 0% 5%;
+    font-size: smaller;
+}
+
+
+
+#main-art > .main-body
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#main-art
+{
+    background-color: black;
+    font-family: "Comfortaa";
+    margin-top: -70px;
+    margin-bottom: 5%;
+    height: 100vh;
+    width: auto;
+    position: relative;
+    z-index: 1;
+    padding: 1%;
+    color: white;
+    top: -1%;
+}
+
+.artist-container > .artist
+{
+    text-align: left;
+}
+.art-view
+{
+    max-height: 75vh;
+    max-width: 100vh;
+    min-height: 30vh;
+    text-align: center;
+    vertical-align: middle;
+    object-position: center;
+    object-fit: fill;
+    background-color: var(--cyan);
+    border-radius: 2%;
+}
+
+
+.art-divider
+{
+    width: 2px;
+    background-color: var(--pink);
+    margin: 0px 10px;
+}
+.artist-container
+{
+    width: 25%;
+}
+.art-description
+{
+    margin: 15% 5%;
+}
+
+#main-login
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+    font-family: "Comfortaa";
+    margin-top: -70px;
+    margin-bottom: 5%;
+    width: auto;
+    position: relative;
+    z-index: 1;
+    padding: 1%;
+    color: white;
+    top: -1%;
+    vertical-align: middle;   
+}
+
+.login-divider
+{
+    width: 2px;
+    background-color: var(--pink);
+    margin: 0px 10px;
+    height: 75vh;
+}
+.login-container
+{
+    width: 35vw;
+    height: 75vh;
+    background-color: var(--pink);
+    border-radius: 3%;
+
+    min-width: 400px;
+    min-height: 600px;
+}
+
+#main-about
+{
+    font-family: "Comfortaa";
+    text-align: center;
+    margin-top: -100px;
+}
+.about-text
+{
+    height: 50vh;
+    max-width: 60%;
+    background-color: var(--dark-grey);
+    position: relative;
+    left: 20%;
+    border-radius: 2%;
+    color: white;
+}
+
+#main-profile
+{
+    font-family: "Comfortaa";
+    margin-top: -100px;
+    display: flex;
+    justify-content: space-around;
+    top: 5%;
+    height: 40vh;
+    background-color: var(--dark-grey);
+    width: 98%;
+    border-radius: 1%;
+    left: 1%;
+}
+.picture-container
+{
+    height: auto;
+    width: auto;
+    position: relative;
+    top: 10%;
+}
+.profile-picture
+{
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    background-color: var(--pink);
+}
+
+#main-profile > .artist-container
+{
+    width: 70%;
+    height: 90%;
+    background-color: var(--pink);
+    border-radius: 3%;
+}
+#main-profile > .login-divider
+{
+    height: 97%;
+}
+#main-profile > .artist-container > .art-description
+{
+    margin-top: 5%;
+}
+
+#profile-explore
+{
+    background-color: black;
+    font-family: "Comfortaa";
+    height: 100vh;
+    width: 98%;
+    position: relative;
+    z-index: 1;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    top: 4%;
+    left: 1%;
+}
+#profile-explore > .main-title
+{
+    position: relative;
+    top: 1%;
+}
+
+.post-container
+{
+    background-color: var(--dark-grey);
+    padding: 2%;
+    border-radius: 2%;
+    min-height: 50vh;
+}
+.post-title
+{
+    margin: 2%;
+}

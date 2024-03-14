@@ -1,0 +1,130 @@
+#track-header
+{
+    color: white;
+    font-family: 'Comfortaa';
+    top: -111%;
+    left: 0%;
+    font-weight: 100;
+    text-align: center;
+    margin: 50px;
+    user-select: none;
+    width: auto;
+    position: relative;
+    transition: 0.7s ease;
+    z-index: 0;
+}
+
+#track-header:hover
+{
+    color: var(--pink);
+    transform: scale(1.05);
+}
+
+#image-track > .image 
+{
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% 50%;
+    user-select: none;
+    transition: 0.7s ease;
+    border-radius: 3%;
+}
+
+#image-track:active > .image
+{
+    transform: translate(0%, 13.5%) scale(0.75);
+    margin: -90px;
+    border-radius: 0%;
+}
+
+#image-track
+{
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 51%;
+    margin: 50px 0px; 
+    transform: translate(0%); 
+    transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
+    z-index: 0; 
+    user-select: none;
+}
+
+/* #image-track:active
+{
+    cursor: grabbing;
+    transform: translate(0%, 22%) scale(0.75);
+    border-radius: 1%;
+} */
+
+#drag-container
+{
+    position: relative;
+    top: -100%;
+    height: auto;
+    width: auto;
+    transition: transform 500ms cubic-bezier(0.13, 0.53, 0.38, 0.97);
+    transform: scale(0.0001);
+    z-index: -1;
+    color: white;
+}
+
+#image-track:active + #drag-container 
+{
+    position: relative;
+    transform: translateY(-65%) scale(1); 
+}
+
+#drag
+{
+    /* color: white; */
+    font-family: 'Comfortaa';
+    height: 5rem;
+    font-weight: 100;
+    font-size: 2rem;
+    width: auto;
+    position: relative;
+    text-align: center;
+    top: -107%;
+    /* background-color: cyan; */
+    display: flex;
+    user-select: none;
+    /* display: none; */
+}
+
+#drag-left
+{
+    text-align: right;
+    left: -50%;
+    display: inline-block;
+    width: 45%;
+    transition: 0.7s ease;
+}
+
+#drag-left:hover
+{
+    color: var(--pink);
+    transform: translateX(-5%) scale(1.05);
+}
+
+#drag-middle
+{
+    width: 10%;
+}
+
+#drag-right
+{
+    text-align: left;
+    left: 0%;
+    display: inline-block;
+    width: 45%;
+    transition: 0.7s ease;
+}
+
+#drag-right:hover
+{
+    color: var(--pink);
+    transform: translateX(5%) scale(1.05);
+}

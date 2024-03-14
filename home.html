@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vartika's Gift</title>
+    <link rel="stylesheet" type="text/css" href="trackStyle.css">
+    <link rel="stylesheet" type="text/css" href="bodyStyle.css">
+    <link rel="stylesheet" type="text/css" href="galleryCurtainStyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/eca0eefe21.js" crossorigin="anonymous"></script>
+</head>
+
+<body data-nav="false">
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-branding nav-link"> VAVES <i class="fa-solid fa-palette"draggable="false"></i> </a>
+            
+            <ul class="nav-menu">
+
+                <!-- <li class="nav-item">
+                    <a href="{% url 'profile' %}" class="nav-link"> Profile </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{% url 'post-create' %}" class="nav-link"> Post </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="{% url 'blog-home' %}" class="nav-link"> Home </a>
+                </li> -->
+
+                <li class="nav-item">
+                    <a href="explore.html" class="nav-link"> Explore more </a>
+                </li>
+<!-- 
+                <li class="nav-item">
+                    <a href="{% url 'blog-about' %}" class="nav-link"> About </a>
+                </li>
+            
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{% url 'logout' %}" class="nav-link"> Logout </a>
+                </li>
+                {% endif %} -->
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+        </nav>
+    </header>
+    <script src="hamburgerScript.js"></script>
+
+    <!-- add background image / text here which would be moved  -->
+    <main></main>
+
+    <div id="track-header">
+        <h1> My love </h1>
+    </div>
+
+
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+        <img class="image" src="IMG-20240314-WA0022.jpg" draggable="false" />
+        <img class="image" src="IMG-20240314-WA0023.jpg" draggable="false" />
+        <img class="image" src="IMG-20240314-WA0024.jpg" draggable="false" />
+        <img class="image" src="IMG-20240314-WA0025.jpg" draggable="false" />
+        <img class="image" src="IMG-20240314-WA0026.jpg" draggable="false" />
+        <img class="image" src="IMG-20240314-WA0030.jpg" draggable="false" />
+        <img class="image" src="IMG-20240314-WA0031.jpg" draggable="false" />
+        <img class="image" src="IMG-20240314-WA0032.jpg" draggable="false" />
+        <img class="image" src="IMG-20240314-WA0033.jpg" draggable="false" />
+    </div>
+<!-- 
+    <div id="drag-container">
+        <div id="drag">
+            <div id="drag-left">
+                Drag Images to View
+            </div>
+
+            <div id="drag-middle"> </div>
+
+            <div id="drag-right">
+                Drag Images to View
+            </div>
+        </div>
+
+        <div id="drag">
+            <div id="drag-left">
+                <i class="fa-solid fa-arrow-right fa-flip-horizontal fa-2xl" style="color: #ffb6c1;"
+                    draggable="false"></i>
+            </div>
+
+            <div id="drag-middle"> </div>
+
+            <div id="drag-right">
+                <i class="fa-solid fa-arrow-right fa-2xl" style="color: #ffb6c1;" draggable="false"></i>
+            </div>
+        </div>
+    </div> -->
+
+    <script type="text/javascript" src="trackScript.js"></script>
+
+
+    <button id="nav-toggle" type="button" onclick="toggleNav()">
+        <i class="open fa-solid fa-palette fa-xl"></i>
+        <i class="close fa-solid fa-xmark fa-xl"></i>
+    </button>
+    <script type="text/javascript" src="curtainScript.js"></script>
+
+</body>
+
+</html>
